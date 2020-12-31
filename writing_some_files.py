@@ -29,6 +29,10 @@ def write_file(file_name):
 
 
 def single_threaded_write_files():
+    """
+    Write the files with a single thread
+    """
+
     start_time = time.time()
     for thread_number in xrange(NUMBER_OF_FILES):
         write_file('file-{}.txt'.format(thread_number))
@@ -37,6 +41,10 @@ def single_threaded_write_files():
 
 
 def threaded_write_files():
+    """
+    Write the files with a multithreading
+    """
+
     start_time = time.time()
     thread_list = []
     for thread_number in xrange(NUMBER_OF_FILES):
@@ -51,6 +59,10 @@ def threaded_write_files():
 
 
 def processed_write_files():
+    """
+    Write the files with a multiprocessing
+    """
+
     start_time = time.time()
     process_list = []
     for thread_number in xrange(NUMBER_OF_FILES):
